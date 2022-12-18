@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://images/environment/rockCluster3.png" type="Texture" id=1]
+
+[node name="RockCluster3" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 5, 144, 1, 163, 0, 187, 30, 214, 44, 214, 65, 211, 77, 217, 88, 225, 113, 252, 130, 252, 163, 250, 183, 237, 188, 236, 203, 233, 245, 239, 278, 243, 287, 243, 361, 203, 367, 162, 367, 157, 365, 154, 358, 151, 356, 151, 356, 147, 352, 141, 350, 134, 341, 117, 338, 115, 323, 110, 320, 105, 315, 78, 313, 75, 272, 29, 263, 28, 256, 28, 248, 34, 247, 35, 242, 35, 241, 34, 235, 32, 229, 32, 212, 35, 211, 30, 195, 14, 161, 0, 159, 0, 121, 3, 110, 5, 93, 36, 88, 47, 73, 60, 69, 62, 59, 78, 54, 90, 48, 111, 48, 116, 41, 120, 37, 123, 28, 132 )

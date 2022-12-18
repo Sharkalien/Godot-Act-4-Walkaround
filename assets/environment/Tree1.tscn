@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://images/environment/tree1Glow.png" type="Texture" id=1]
+[ext_resource path="res://images/environment/tree1.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Glow"
+length = 4.0
+loop = true
+step = 0.0285714
+tracks/0/type = "value"
+tracks/0/path = NodePath("Tree1Glow:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Tree1Glow:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Tree1" type="Sprite"]
+position = Vector2( -160, -598 )
+texture = ExtResource( 2 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree1Glow" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Glow"
+anims/Glow = SubResource( 1 )
+anims/RESET = SubResource( 2 )

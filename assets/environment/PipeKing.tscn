@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://images/environment/pipeKing.png" type="Texture" id=1]
+
+[node name="PipeKing" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 329, 122, 284, 128, 192, 145, 126, 157, 59, 164, -3, 163, 3, 212, 51, 245, 74, 256, 125, 267, 157, 267, 200, 265, 200, 272, 233, 271, 241, 258, 284, 266, 371, 236, 432, 277, 434, 289, 453, 308, 528, 331, 549, 350, 595, 361, 606, 358, 632, 346, 654, 333, 679, 312, 700, 283, 711, 253, 713, 238, 713, 193, 713, 151, 708, 109, 683, 65, 642, 32, 588, 7, 536, -1, 475, 2, 411, 23, 369, 53, 342, 86 )

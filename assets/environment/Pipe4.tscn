@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://images/environment/pipe4.png" type="Texture" id=1]
+
+[node name="Pipe4" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 0, 99, 8, 110, 10, 119, 27, 131, 27, 135, 49, 146, 50, 146, 59, 138, 76, 151, 80, 151, 118, 134, 125, 132, 135, 119, 135, 116, 138, 108, 138, 101, 130, 94, 114, 85, 85, 76, 52, 72, 21, 81 )
