@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://images/references/slice 1.png" type="Texture" id=1]
 [ext_resource path="res://images/environment/stonePath5.png" type="Texture" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://images/environment/rockCluster4.png" type="Texture" id=23]
 [ext_resource path="res://images/environment/rockStair2.png" type="Texture" id=24]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=26]
 
 [node name="Zone1" type="Node2D"]
 
@@ -2422,6 +2423,9 @@ position = Vector2( 136, 407 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 position = Vector2( 53, -144 )
 remote_path = NodePath("../../../Camera2D")
+
+[node name="Enemy" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 515, 499 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 189, 263 )

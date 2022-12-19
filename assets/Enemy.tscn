@@ -66,7 +66,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 14, -80 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -137,12 +137,16 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 14, -80 ) ]
 }
 
 [node name="Enemy" type="KinematicBody2D"]
 
 [node name="Sprites" type="Node2D" parent="."]
+position = Vector2( 14, -80 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Body" type="Node2D" parent="Sprites"]
 
@@ -178,7 +182,7 @@ anims/idle = SubResource( 3 )
 
 [node name="reference2" type="Sprite" parent="."]
 visible = false
-position = Vector2( -20, -22 )
+position = Vector2( -6, -102 )
 texture = ExtResource( 8 )
 hframes = 25
 __meta__ = {
@@ -187,7 +191,7 @@ __meta__ = {
 
 [node name="reference1" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.505882 )
-position = Vector2( -2, -23 )
+position = Vector2( 12, -103 )
 texture = ExtResource( 9 )
 hframes = 15
 __meta__ = {
