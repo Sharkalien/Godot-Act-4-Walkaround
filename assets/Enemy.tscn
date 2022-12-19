@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://images/enemies/parts/head/eyes.png" type="Texture" id=1]
 [ext_resource path="res://images/enemies/parts/head/teeth_upper.png" type="Texture" id=2]
@@ -9,6 +9,14 @@
 [ext_resource path="res://images/enemies/parts/body/harlequin.png" type="Texture" id=7]
 [ext_resource path="res://images/references/imp spritesheet ref 2.png" type="Texture" id=8]
 [ext_resource path="res://images/references/imp spritesheet ref 1.png" type="Texture" id=9]
+[ext_resource path="res://images/enemies/parts/leg_left/leg1.png" type="Texture" id=10]
+[ext_resource path="res://images/enemies/parts/leg_right/leg1.png" type="Texture" id=11]
+[ext_resource path="res://images/enemies/parts/harlequinFootLeft.png" type="Texture" id=12]
+[ext_resource path="res://images/enemies/parts/arm_left/left arm.png" type="Texture" id=13]
+[ext_resource path="res://images/enemies/parts/hand1.png" type="Texture" id=14]
+[ext_resource path="res://images/enemies/parts/harlequinFootRight.png" type="Texture" id=15]
+[ext_resource path="res://images/enemies/parts/leg_left/leg2.png" type="Texture" id=16]
+[ext_resource path="res://images/enemies/parts/leg_right/leg2.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -68,6 +76,102 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 14, -80 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprites/ArmLeft:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 23, -25 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprites/ArmRight:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -34, -6 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprites/FootRight:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -41, 72 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprites/FootLeft:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 25, 78 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprites/LegRight:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -44, 25 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Sprites/LegLeft:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 19, 33 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Sprites/LegRight/LegR:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 11 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Sprites/LegLeft/LegL:texture")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 10 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "attack"
@@ -93,7 +197,7 @@ loop = true
 step = 0.0285714
 tracks/0/type = "value"
 tracks/0/path = NodePath("reference1:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -139,14 +243,156 @@ tracks/3/keys = {
 "update": 1,
 "values": [ Vector2( 14, -80 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprites/ArmLeft:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.142857, 0.285714, 0.428571, 0.571428, 0.714285 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 23, -25 ), Vector2( 24, -24 ), Vector2( 25, -19 ), Vector2( 23, -13 ), Vector2( 19, -15 ), Vector2( 19, -21 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprites/ArmRight:position")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.142857, 0.285714, 0.428571, 0.571428, 0.714285 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -34, -6 ), Vector2( -37, -8 ), Vector2( -43, -11 ), Vector2( -46, -17 ), Vector2( -40, -17 ), Vector2( -32, -11 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprites/FootRight:position")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.285714, 0.714285 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -41, 72 ), Vector2( -44, 72 ), Vector2( -41, 72 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprites/FootLeft:position")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.285714, 0.714285 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 25, 78 ), Vector2( 27, 78 ), Vector2( 25, 78 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprites/LegRight:position")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.285714, 0.714285 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -44, 25 ), Vector2( -47, 33 ), Vector2( -44, 25 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Sprites/LegLeft:position")
+tracks/9/interp = 0
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.285714, 0.714285 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 19, 33 ), Vector2( 20, 35 ), Vector2( 19, 33 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Sprites/LegRight/LegR:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.285714, 0.714285 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 11 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Sprites/LegLeft/LegL:texture")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.285714, 0.714285 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 16 ), ExtResource( 10 ) ]
+}
 
 [node name="Enemy" type="KinematicBody2D"]
 
 [node name="Sprites" type="Node2D" parent="."]
 position = Vector2( 14, -80 )
+
+[node name="LegLeft" type="Node2D" parent="Sprites"]
+position = Vector2( 19, 33 )
+
+[node name="LegL" type="Sprite" parent="Sprites/LegLeft"]
+texture = ExtResource( 10 )
+centered = false
+
+[node name="LegRight" type="Node2D" parent="Sprites"]
+position = Vector2( -44, 25 )
+
+[node name="LegR" type="Sprite" parent="Sprites/LegRight"]
+texture = ExtResource( 11 )
+centered = false
+
+[node name="FootLeft" type="Node2D" parent="Sprites"]
+position = Vector2( 25, 78 )
+
+[node name="Foot" type="Sprite" parent="Sprites/FootLeft"]
+position = Vector2( 0, -6 )
+texture = ExtResource( 12 )
+flip_h = true
+
+[node name="FootRight" type="Node2D" parent="Sprites"]
+position = Vector2( -41, 72 )
+
+[node name="Foot" type="Sprite" parent="Sprites/FootRight"]
+position = Vector2( 0, -6 )
+texture = ExtResource( 15 )
+
+[node name="ArmRight" type="Node2D" parent="Sprites"]
+position = Vector2( -34, -6 )
+scale = Vector2( -1, 1 )
+
+[node name="Arm" type="Sprite" parent="Sprites/ArmRight"]
+position = Vector2( -10, -8 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="Hand" type="Node2D" parent="Sprites/ArmRight"]
+position = Vector2( 27, 29 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Hand1" type="Sprite" parent="Sprites/ArmRight/Hand"]
+position = Vector2( -1, -3 )
+texture = ExtResource( 14 )
+flip_h = true
 
 [node name="Body" type="Node2D" parent="Sprites"]
 
@@ -174,6 +420,25 @@ texture = ExtResource( 2 )
 position = Vector2( 2, -48 )
 texture = ExtResource( 6 )
 
+[node name="ArmLeft" type="Node2D" parent="Sprites"]
+position = Vector2( 23, -25 )
+
+[node name="Arm" type="Sprite" parent="Sprites/ArmLeft"]
+position = Vector2( -10, -8 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="Hand" type="Node2D" parent="Sprites/ArmLeft"]
+position = Vector2( 34, 28 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Hand1" type="Sprite" parent="Sprites/ArmLeft/Hand"]
+position = Vector2( -1, -3 )
+texture = ExtResource( 14 )
+flip_h = true
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"
 anims/RESET = SubResource( 2 )
@@ -190,6 +455,7 @@ __meta__ = {
 }
 
 [node name="reference1" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.505882 )
 position = Vector2( 12, -103 )
 texture = ExtResource( 9 )
