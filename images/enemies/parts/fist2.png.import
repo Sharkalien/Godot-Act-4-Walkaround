@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fist #4.png-10d812d61bb8b4a6cb3c82e6090032fa.stex"
+path="res://.import/fist2.png-fb7f5d74e2d2cf96cb6de7dad13530a2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemies/parts/fist #4.png"
-dest_files=[ "res://.import/fist #4.png-10d812d61bb8b4a6cb3c82e6090032fa.stex" ]
+source_file="res://images/enemies/parts/fist2.png"
+dest_files=[ "res://.import/fist2.png-fb7f5d74e2d2cf96cb6de7dad13530a2.stex" ]
 
 [params]
 
