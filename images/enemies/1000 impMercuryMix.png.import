@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/930.png-54950e9fc9082df4f8a349f47003246a.stex"
+path="res://.import/1000 impMercuryMix.png-f86dcaac9b5bdbcdec5f5a30bc2d67e2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemies/930.png"
-dest_files=[ "res://.import/930.png-54950e9fc9082df4f8a349f47003246a.stex" ]
+source_file="res://images/enemies/1000 impMercuryMix.png"
+dest_files=[ "res://.import/1000 impMercuryMix.png-f86dcaac9b5bdbcdec5f5a30bc2d67e2.stex" ]
 
 [params]
 

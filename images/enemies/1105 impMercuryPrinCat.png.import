@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/791.png-eb2fbd40f59aab558e55419f3410ffe1.stex"
+path="res://.import/1105 impMercuryPrinCat.png-83e3256e641f4d49be94d57493cf7be8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemies/791.png"
-dest_files=[ "res://.import/791.png-eb2fbd40f59aab558e55419f3410ffe1.stex" ]
+source_file="res://images/enemies/1105 impMercuryPrinCat.png"
+dest_files=[ "res://.import/1105 impMercuryPrinCat.png-83e3256e641f4d49be94d57493cf7be8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1070.png-9ffcdd34ad58cb3c73a18e217a8acf63.stex"
+path="res://.import/895 impShalePrinHulu.png-ca1f41893a43788967e04736b84f746e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemies/1070.png"
-dest_files=[ "res://.import/1070.png-9ffcdd34ad58cb3c73a18e217a8acf63.stex" ]
+source_file="res://images/enemies/895 impShalePrinHulu.png"
+dest_files=[ "res://.import/895 impShalePrinHulu.png-ca1f41893a43788967e04736b84f746e.stex" ]
 
 [params]
 

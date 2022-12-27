@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1175.png-36053140922c86313d095394578de9da.stex"
+path="res://.import/1070 impCobaltMix.png-bc359b0ccd76b4020489a96dca14fd94.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemies/1175.png"
-dest_files=[ "res://.import/1175.png-36053140922c86313d095394578de9da.stex" ]
+source_file="res://images/enemies/1070 impCobaltMix.png"
+dest_files=[ "res://.import/1070 impCobaltMix.png-bc359b0ccd76b4020489a96dca14fd94.stex" ]
 
 [params]
 

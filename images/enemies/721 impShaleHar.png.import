@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/965.png-c5b2de32d6f11ec69965bba3b6471298.stex"
+path="res://.import/721 impShaleHar.png-a97189eba83ca5b430dcbe6496f09702.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemies/965.png"
-dest_files=[ "res://.import/965.png-c5b2de32d6f11ec69965bba3b6471298.stex" ]
+source_file="res://images/enemies/721 impShaleHar.png"
+dest_files=[ "res://.import/721 impShaleHar.png-a97189eba83ca5b430dcbe6496f09702.stex" ]
 
 [params]
 
