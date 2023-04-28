@@ -2427,6 +2427,9 @@ remote_path = NodePath("../../../Camera2D")
 [node name="Enemy" parent="YSort" instance=ExtResource( 26 )]
 position = Vector2( 515, 499 )
 
+[node name="Enemy2" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( -82, -214 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 189, 263 )
 current = true

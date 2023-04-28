@@ -50,9 +50,9 @@ func _on_TextureButton_toggled(button_pressed: bool) -> void:
 				tCard.position.x = cardPos.x
 				tCard.position.y = cardPos.y
 			else:
-#				create_tween().set_trans(Tween.TRANS_QUAD).tween_property(tCard,"global_position",cardPos,0.06)
-				create_tween().tween_property(tCard,"position:x",ceil((cardPos.x - tCard.position.x) / 2),0.03)
-				create_tween().tween_property(tCard,"position:y",ceil((cardPos.y - tCard.position.y) / 2),0.03)
+				create_tween().set_trans(Tween.TRANS_QUAD).tween_property(tCard,"global_position",cardPos,0.06)
+#				create_tween().tween_property(tCard,"position:x",ceil((cardPos.x - tCard.position.x) / 2),0.03)
+#				create_tween().tween_property(tCard,"position:y",ceil((cardPos.y - tCard.position.y) / 2),0.03)
 #				tCard.position.x += ceil((cardPos.x - tCard.position.x) / 2)
 #				tCard.position.y += ceil((cardPos.y - tCard.position.y) / 2)
 #			else:

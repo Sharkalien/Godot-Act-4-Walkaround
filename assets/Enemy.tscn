@@ -1,7 +1,7 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://images/enemies/parts/head/eyes.png" type="Texture" id=1]
-[ext_resource path="res://images/enemies/parts/head/teeth_upper.png" type="Texture" id=2]
+[ext_resource path="res://images/enemies/parts/head/teethUpper.png" type="Texture" id=2]
 [ext_resource path="res://images/enemies/parts/body/torso.png" type="Texture" id=3]
 [ext_resource path="res://images/enemies/parts/head/head.png" type="Texture" id=4]
 [ext_resource path="res://images/enemies/parts/head/blink.png" type="Texture" id=5]
@@ -12,11 +12,12 @@
 [ext_resource path="res://images/enemies/parts/leg_left/leg1.png" type="Texture" id=10]
 [ext_resource path="res://images/enemies/parts/leg_right/leg1.png" type="Texture" id=11]
 [ext_resource path="res://images/enemies/parts/harlequinFootLeft.png" type="Texture" id=12]
-[ext_resource path="res://images/enemies/parts/arm_left/left arm.png" type="Texture" id=13]
+[ext_resource path="res://images/enemies/parts/arm_left/baseArmLeft.png" type="Texture" id=13]
 [ext_resource path="res://images/enemies/parts/hand1.png" type="Texture" id=14]
 [ext_resource path="res://images/enemies/parts/harlequinFootRight.png" type="Texture" id=15]
 [ext_resource path="res://images/enemies/parts/leg_left/leg2.png" type="Texture" id=16]
 [ext_resource path="res://images/enemies/parts/leg_right/leg2.png" type="Texture" id=17]
+[ext_resource path="res://assets/Enemy.gd" type="Script" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -340,7 +341,12 @@ tracks/11/keys = {
 "values": [ ExtResource( 10 ), ExtResource( 16 ), ExtResource( 10 ) ]
 }
 
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 13.0
+height = 90.0
+
 [node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 18 )
 
 [node name="Sprites" type="Node2D" parent="."]
 position = Vector2( 14, -80 )
@@ -349,6 +355,7 @@ position = Vector2( 14, -80 )
 position = Vector2( 19, 33 )
 
 [node name="LegL" type="Sprite" parent="Sprites/LegLeft"]
+self_modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 10 )
 centered = false
 
@@ -356,6 +363,7 @@ centered = false
 position = Vector2( -44, 25 )
 
 [node name="LegR" type="Sprite" parent="Sprites/LegRight"]
+self_modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 11 )
 centered = false
 
@@ -390,6 +398,7 @@ __meta__ = {
 }
 
 [node name="Hand1" type="Sprite" parent="Sprites/ArmRight/Hand"]
+self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -1, -3 )
 texture = ExtResource( 14 )
 flip_h = true
@@ -397,6 +406,7 @@ flip_h = true
 [node name="Body" type="Node2D" parent="Sprites"]
 
 [node name="Torso" type="Sprite" parent="Sprites/Body"]
+self_modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 3 )
 
 [node name="Costume" type="Sprite" parent="Sprites/Body"]
@@ -406,6 +416,7 @@ texture = ExtResource( 7 )
 position = Vector2( -32, -35 )
 
 [node name="Head" type="Sprite" parent="Sprites/Head"]
+self_modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 4 )
 
 [node name="Eyes" type="AnimatedSprite" parent="Sprites/Head"]
@@ -435,6 +446,7 @@ __meta__ = {
 }
 
 [node name="Hand1" type="Sprite" parent="Sprites/ArmLeft/Hand"]
+self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -1, -3 )
 texture = ExtResource( 14 )
 flip_h = true
@@ -444,6 +456,15 @@ autoplay = "idle"
 anims/RESET = SubResource( 2 )
 anims/attack = SubResource( 4 )
 anims/idle = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 5, -8 )
+rotation = 1.5708
+shape = SubResource( 5 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+process_parent = true
+physics_process_parent = true
 
 [node name="reference2" type="Sprite" parent="."]
 visible = false
