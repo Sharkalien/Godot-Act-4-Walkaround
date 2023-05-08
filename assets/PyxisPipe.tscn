@@ -1,0 +1,147 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://images/pyxis/1288.png" type="Texture" id=1]
+[ext_resource path="res://images/pyxis/1290.png" type="Texture" id=2]
+[ext_resource path="res://images/pyxis/1292.png" type="Texture" id=3]
+[ext_resource path="res://images/pyxis/1295.png" type="Texture" id=4]
+[ext_resource path="res://images/pyxis/1298.png" type="Texture" id=5]
+[ext_resource path="res://images/pyxis/1300.png" type="Texture" id=6]
+[ext_resource path="res://images/pyxis/1302.png" type="Texture" id=7]
+[ext_resource path="res://images/pyxis/1304.png" type="Texture" id=8]
+[ext_resource path="res://images/pyxis/1308.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PyxisSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PyxisSprite/Clog:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "clogged"
+length = 0.001
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PyxisSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PyxisSprite/Clog:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "openEmpty"
+length = 0.16
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PyxisSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PyxisSprite/Clog:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "openFull"
+length = 0.16
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("PyxisSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PyxisSprite/Clog:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="PyxisPipe" type="StaticBody2D"]
+
+[node name="PyxisSprite" type="Sprite" parent="."]
+position = Vector2( -105, -334 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Clog" type="Sprite" parent="PyxisSprite"]
+visible = false
+position = Vector2( 37, 140 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/clogged = SubResource( 4 )
+anims/openEmpty = SubResource( 2 )
+anims/openFull = SubResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 3, 47, 29, 43, 56, 25, 65, 5, 64, -25, 53, -46, 25, -57, -2, -61, -32, -55, -51, -37, -58, -20, -58, 6, -47, 27, -18, 45 )

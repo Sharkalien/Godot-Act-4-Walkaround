@@ -555,7 +555,7 @@ package GateLite_fla
          checkCrux();
       }
       
-      public function getHit(param1:*) : void // param1 is amount of damage dealt to player
+      public function getHit(damage:*) : void
       {
 		// loc2 is knockback distance or direction?
          var _loc2_:Number = NaN;
@@ -565,7 +565,7 @@ package GateLite_fla
          char.gotoAndPlay("hurt");
          moving = false;
          keying = false;
-         hp -= param1;
+         hp -= damage;
          char.grit.gotoAndStop(1);
          char.grit.alpha = 0;
          spaceHeld = 0;
@@ -1415,7 +1415,7 @@ package GateLite_fla
                      while(_loc18_ < pickUps.length)
                      {
                         _loc22_ = pickUps[_loc18_][0].y;
-                        if(pickUps[_loc18_][4]) // pickUps[_loc18_][4] = itemVelY
+                        if(pickUps[_loc18_][4]) // pickUps[_loc18_][4] = itemFloorYPos
                         {
                            _loc22_ = pickUps[_loc18_][4];
                         }
@@ -1835,13 +1835,13 @@ package GateLite_fla
                         getItem(curItemIndex);
                         break;
                      }
-                     if(pickUps[curItemIndex][2])
+                     if(pickUps[curItemIndex][2]) // if item has x velocity that isn't 0
                      {
-                        itemMC.x += pickUps[curItemIndex][2];
-                        itemMC.y += pickUps[curItemIndex][3];
-                        if(Math.abs(pickUps[curItemIndex][2]) < 30)
+                        itemMC.x += pickUps[curItemIndex][2]; // item's x velocity
+                        itemMC.y += pickUps[curItemIndex][3]; // item's y velocity
+                        if(Math.abs(pickUps[curItemIndex][2]) < 30) // evaluates to either 1 or 0. when an item is launched out of the sylladex at 40, it skips this if statement and flies completely straight until hitting something
                         {
-                           pickUps[curItemIndex][3] += 1.1;
+                           pickUps[curItemIndex][3] += 1.1; // gravity/air resistance/floatiness/weightiness
                         }
                         if(!map.hitTestPoint(itemMC.x,pickUps[curItemIndex][4],true) || itemMC.x < -x / scaleX || itemMC.x > -x / scaleX + stage.stageWidth / scaleX)
                         {
@@ -1894,7 +1894,7 @@ package GateLite_fla
                                     {
                                        itemMC.x -= pickUps[curItemIndex][2];
                                        pickUps[curItemIndex][2] *= -0.2;
-                                       pickUps[curItemIndex][3] = -5;
+                                       pickUps[curItemIndex][3] = -5; // pickUps[curItemIndex][3] = 0
                                     }
                                  }
                               }
@@ -2530,7 +2530,7 @@ package GateLite_fla
          {
             if(using)
             {
-               using = false;
+               using = false; // if the player doesn't have their sylladex open, play enemy animations
                hovered = new Point(hovered.x,-1);
                enemyIndex = 0;
                while(enemyIndex < enemies.length)
@@ -2551,7 +2551,7 @@ package GateLite_fla
                }
                delivering = false;
             }
-            else
+            else // if they do have their sylladex open, stop all anims in their place and disable character controls
             {
                using = true;
                moving = false;
@@ -3021,23 +3021,23 @@ package GateLite_fla
          var itemClass:Class = null;
          var itemMC:MovieClip = null;
          var attackPower:Array = null;
-         var itemVelY:int = 0;
+         var itemFloorYPos:int = 0;
          itemClass = getDefinitionByName("item" + itemIndex) as Class;
          itemMC = MovieClip(Object(new itemClass()));
          attackPower = new Array(0,1,2,2,16,2,2,2,2,16,2,2,2,8,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2); // item attack power ordered by item index 
          addChildAt(itemMC,getChildIndex(spacer1));
          itemMC.x = itemPos.x;
          itemMC.y = itemPos.y;
-         itemVelY = char.y + 5;
+         itemFloorYPos = char.y + 5;
          if(!itemVelX)
          {
-            itemVelY = itemMC.y;
+            itemFloorYPos = itemMC.y;
          }
          else if(rest[0])
          {
-            itemVelY = rest[0];
+            itemFloorYPos = rest[0];
          }
-         pickUps.push(new Array(itemMC,itemIndex,itemVelX,0,itemVelY,attackPower[itemIndex])); // 0 is default y velocity
+         pickUps.push(new Array(itemMC,itemIndex,itemVelX,0,itemFloorYPos,attackPower[itemIndex])); // 0 is default y velocity?
       }
       
       public function progresser(param1:ProgressEvent) : void
