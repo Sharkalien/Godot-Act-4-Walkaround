@@ -36,7 +36,9 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Tree1" type="Sprite"]
+[node name="Tree1" type="Node2D"]
+
+[node name="Tree1Sprite" type="Sprite" parent="."]
 position = Vector2( -160, -598 )
 texture = ExtResource( 2 )
 centered = false
@@ -44,12 +46,12 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Tree1Glow" type="Sprite" parent="."]
+[node name="Tree1Glow" type="Sprite" parent="Tree1Sprite"]
 self_modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 1 )
 centered = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tree1Sprite"]
 autoplay = "Glow"
 anims/Glow = SubResource( 1 )
 anims/RESET = SubResource( 2 )

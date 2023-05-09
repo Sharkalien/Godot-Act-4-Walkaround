@@ -144,4 +144,9 @@ anims/openEmpty = SubResource( 2 )
 anims/openFull = SubResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 polygon = PoolVector2Array( 3, 47, 29, 43, 56, 25, 65, 5, 64, -25, 53, -46, 25, -57, -2, -61, -32, -55, -51, -37, -58, -20, -58, 6, -47, 27, -18, 45 )
+
+[node name="ItemSpawner" type="Position2D" parent="."]
+visible = false
+position = Vector2( 0, -250 )

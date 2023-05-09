@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://images/references/slice 1.png" type="Texture" id=1]
 [ext_resource path="res://images/environment/stonePath5.png" type="Texture" id=2]
@@ -26,6 +26,12 @@
 [ext_resource path="res://images/environment/rockStair2.png" type="Texture" id=24]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/PyxisPipe.tscn" type="PackedScene" id=27]
+[ext_resource path="res://assets/environment/Tree1.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/environment/Tree2.tscn" type="PackedScene" id=29]
+[ext_resource path="res://assets/environment/Tree4.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/environment/Tree3.tscn" type="PackedScene" id=31]
+[ext_resource path="res://assets/environment/Pipe2.tscn" type="PackedScene" id=32]
 
 [node name="Zone1" type="Node2D"]
 
@@ -39,6 +45,9 @@ __meta__ = {
 }
 
 [node name="Stone Paths" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="StonePath1" type="Sprite" parent="Stone Paths"]
 position = Vector2( -202, 770 )
@@ -1918,6 +1927,10 @@ flip_h = true
 position = Vector2( -776, -2189 )
 
 [node name="Rock Clusters" type="Node2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="RockCluster5" parent="Rock Clusters" instance=ExtResource( 14 )]
 position = Vector2( -782, -156 )
@@ -2354,6 +2367,7 @@ position = Vector2( 1817, 1851 )
 position = Vector2( 2092, 1713 )
 
 [node name="RockStair2" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2( 1254, 2166 )
 
 [node name="RockCluster141" parent="RockStair2" instance=ExtResource( 12 )]
@@ -2404,18 +2418,18 @@ centered = false
 
 [node name="PipeKing" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1001, -919 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="River" type="Polygon2D" parent="."]
 visible = false
 polygon = PoolVector2Array( 1072, -755, 1022, -755, 976, -761, 931, -774, 889, -787, 846, -806, 797, -831, 762, -852, 722, -881, 678, -912, 652, -939, 619, -975, 603, -991, 584, -1012, 568, -1033, 556, -1052, 542, -1071, 591, -1072, 626, -1074, 647, -1076, 682, -1081, 699, -1084, 731, -1092, 753, -1100, 804, -1115, 847, -1128, 873, -1136, 904, -1146, 932, -1154, 964, -1163, 1013, -1174, 1113, -1195, 1144, -1202, 1188, -1214, 1224, -1224, 1262, -1232, 1392, -1264, 1414, -1266, 1436, -1271, 1446, -1275, 1476, -1280, 1511, -1285, 1537, -1288, 1579, -1290, 1625, -1285, 1660, -1279, 1714, -1269, 1742, -1260, 1812, -1225, 1819, -1224, 1881, -1181, 1939, -1122, 1964, -1089, 1994, -1043, 2015, -1010, 2047, -956, 2061, -927, 2078, -883, 2097, -830, 2122, -717, 2136, -623, 2138, -596, 2138, -579, 2135, -542, 2127, -500, 2121, -471, 2111, -437, 2096, -398, 2085, -373, 2066, -341, 2048, -305, 2042, -300, 2003, -239, 1976, -202, 1931, -154, 1917, -138, 1914, -134, 1884, -105, 1865, -89, 1838, -68, 1812, -52, 1788, -39, 1755, -21, 1724, -5, 1720, -5, 1716, -1, 1702, 7, 1677, 17, 1574, 62, 1519, 86, 1488, 100, 1437, 123, 1393, 140, 1344, 161, 1324, 170, 1296, 183, 1273, 196, 1261, 204, 1106, 263, 1013, 325, 959, 364, 919, 390, 894, 407, 858, 433, 831, 454, 796, 487, 754, 524, 705, 574, 658, 626, 642, 644, 618, 669, 594, 700, 539, 766, 474, 832, 457, 850, 416, 893, 404, 907, 395, 915, 359, 945, 338, 964, 312, 983, 284, 1002, 263, 1017, 239, 1033, 213, 1050, 186, 1066, 154, 1081, 117, 1097, 81, 1112, 62, 1117, 43, 1124, 24, 1130, 1, 1137, -33, 1146, -59, 1154, -90, 1161, -113, 1168, -147, 1174, -199, 1184, -253, 1192, -298, 1197, -310, 1200, -328, 1202, -371, 1214, -413, 1223, -438, 1227, -482, 1234, -524, 1241, -482, 1399, -450, 1393, -397, 1383, -351, 1372, -315, 1365, -289, 1361, -270, 1359, -241, 1355, -201, 1345, -170, 1334, -159, 1331, -144, 1329, -107, 1318, -88, 1314, -36, 1303, 4, 1294, 92, 1283, 213, 1263, 306, 1218, 369, 1168, 485, 1082, 514, 1040, 561, 997, 664, 891, 768, 779, 825, 718, 857, 691, 924, 636, 989, 584, 1094, 497, 1231, 407, 1309, 381, 1365, 364, 1464, 328, 1557, 289, 1638, 251, 1696, 225, 1778, 188, 1827, 169, 1843, 162, 1859, 156, 1882, 146, 1904, 134, 1927, 120, 1949, 105, 1971, 90, 1987, 78, 2063, 32, 2089, -3, 2131, -27, 2145, -40, 2191, -87, 2206, -110, 2213, -119, 2243, -169, 2263, -204, 2283, -243, 2295, -266, 2304, -286, 2320, -338, 2331, -376, 2352, -457, 2359, -490, 2367, -529, 2374, -573, 2378, -612, 2381, -632, 2381, -668, 2376, -701, 2376, -719, 2372, -743, 2373, -763, 2367, -808, 2363, -838, 2358, -866, 2351, -888, 2344, -912, 2337, -929, 2333, -936, 2330, -950, 2321, -976, 2312, -999, 2301, -1023, 2292, -1043, 2281, -1068, 2264, -1102, 2250, -1131, 2234, -1161, 2205, -1210, 2169, -1261, 2136, -1310, 2099, -1344, 2016, -1408, 1973, -1440, 1946, -1458, 1925, -1471, 1914, -1476, 1879, -1487, 1837, -1499, 1789, -1509, 1739, -1520, 1659, -1528, 1616, -1533, 1584, -1535, 1552, -1537, 1527, -1538, 1512, -1537, 1481, -1536, 1409, -1529, 1337, -1529, 1248, -1514, 1096, -1460, 1037, -1409, 993, -1390, 962, -1381, 925, -1367, 899, -1358, 867, -1348, 829, -1337, 791, -1328, 753, -1322, 731, -1318, 706, -1314, 686, -1310, 669, -1309, 660, -1308, 615, -1308, 562, -1310, 527, -1310, 496, -1312, 466, -1312, 440, -1315, 412, -1317, 385, -1319, 338, -1336, 204, -1172, 220, -1161, 239, -1147, 261, -1131, 284, -1112, 317, -1084, 358, -1046, 406, -997, 425, -975, 465, -932, 476, -914, 500, -898, 540, -848, 599, -792, 627, -768, 632, -761, 643, -751, 658, -740, 682, -724, 706, -710, 727, -701, 750, -691, 776, -680, 806, -669, 829, -661, 851, -655, 886, -646, 938, -640, 954, -637, 980, -632, 1029, -628, 1074, -628 )
 
 [node name="YSort" type="YSort" parent="."]
-
-[node name="DesecratedRuin1" parent="YSort" instance=ExtResource( 21 )]
-position = Vector2( -1446, -2125 )
-
-[node name="DesecratedRuin2" parent="YSort/DesecratedRuin1" instance=ExtResource( 20 )]
-position = Vector2( 238, 38 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Player" parent="YSort" instance=ExtResource( 25 )]
 position = Vector2( 136, 407 )
@@ -2430,7 +2444,92 @@ position = Vector2( 515, 499 )
 [node name="Enemy2" parent="YSort" instance=ExtResource( 26 )]
 position = Vector2( -82, -214 )
 
+[node name="DesecratedRuin1" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -1446, -2125 )
+
+[node name="DesecratedRuin2" parent="YSort/DesecratedRuin1" instance=ExtResource( 20 )]
+position = Vector2( 238, 38 )
+
+[node name="PyxisPipe" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( -212, -720 )
+
+[node name="PyxisPipe2" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( 700, -1014 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+
+[node name="PyxisPipe3" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( -1681, -536 )
+scale = Vector2( -1, 1 )
+
+[node name="PyxisPipe4" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( 391, -2302 )
+
+[node name="PyxisPipe5" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( 1915, -2176 )
+
+[node name="PyxisPipe6" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( 2043, 1048 )
+
+[node name="PyxisPipe7" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( -1758, 1773 )
+
+[node name="PyxisPipe8" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( -6, 2083 )
+
+[node name="Tree1" parent="YSort" instance=ExtResource( 28 )]
+position = Vector2( 180, 78 )
+
+[node name="Tree6" parent="YSort" instance=ExtResource( 28 )]
+position = Vector2( -931, 959 )
+scale = Vector2( -1, 1 )
+
+[node name="Tree2" parent="YSort" instance=ExtResource( 29 )]
+position = Vector2( -177, 513 )
+
+[node name="Tree7" parent="YSort" instance=ExtResource( 29 )]
+position = Vector2( -1158, 1158 )
+scale = Vector2( -1, 1 )
+
+[node name="Tree8" parent="YSort" instance=ExtResource( 29 )]
+position = Vector2( -496, 1944 )
+scale = Vector2( -1, 1 )
+
+[node name="Tree9" parent="YSort" instance=ExtResource( 29 )]
+position = Vector2( 153, 1937 )
+
+[node name="Tree10" parent="YSort" instance=ExtResource( 29 )]
+position = Vector2( -619, 2755 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="Tree11" parent="YSort" instance=ExtResource( 29 )]
+position = Vector2( -1951, 1938 )
+
+[node name="Tree3" parent="YSort" instance=ExtResource( 31 )]
+position = Vector2( -281, 48 )
+
+[node name="Tree4" parent="YSort" instance=ExtResource( 30 )]
+position = Vector2( -507, 703 )
+
+[node name="Tree5" parent="YSort" instance=ExtResource( 31 )]
+position = Vector2( 443, 1171 )
+
+[node name="Pipe2" parent="YSort" instance=ExtResource( 32 )]
+position = Vector2( -115, -406 )
+
+[node name="Pipe3" parent="YSort" instance=ExtResource( 32 )]
+position = Vector2( 623, -362 )
+
+[node name="Pipe4" parent="YSort" instance=ExtResource( 32 )]
+position = Vector2( -1472, 2094 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 189, 263 )
 current = true
+limit_left = -2671
+limit_top = -2746
+limit_right = 2433
+limit_bottom = 2754
 smoothing_enabled = true
+editor_draw_limits = true

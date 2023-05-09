@@ -1839,7 +1839,7 @@ package GateLite_fla
                      {
                         itemMC.x += pickUps[curItemIndex][2]; // item's x velocity
                         itemMC.y += pickUps[curItemIndex][3]; // item's y velocity
-                        if(Math.abs(pickUps[curItemIndex][2]) < 30) // evaluates to either 1 or 0. when an item is launched out of the sylladex at 40, it skips this if statement and flies completely straight until hitting something
+                        if(Math.abs(pickUps[curItemIndex][2]) < 30) // when an item is launched out of the sylladex at 40, it skips this if statement and flies completely straight until hitting something
                         {
                            pickUps[curItemIndex][3] += 1.1; // gravity/air resistance/floatiness/weightiness
                         }
@@ -1909,7 +1909,7 @@ package GateLite_fla
                {
                   if(hud.hitTestObject(powerUps[curGristIndex][0]))
                   {
-                     if(powerUps[curGristIndex][5] > 0) // powerUps[curGristIndex][5] = 5. why?
+                     if(powerUps[curGristIndex][5] > 0) // powerUps[curGristIndex][5] = 5, which is basically how many ticks the grist slide for on spawning
                      {
                         --powerUps[curGristIndex][5];
                         powerUps[curGristIndex][0].x += powerUps[curGristIndex][3] = powerUps[curGristIndex][3] / 2;
