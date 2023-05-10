@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://images/ui/captchaCardQS.png" type="Texture" id=1]
 [ext_resource path="res://images/ui/captchaCardA.png" type="Texture" id=2]
+[ext_resource path="res://images/items/item0.png" type="Texture" id=3]
+[ext_resource path="res://images/items/invalidItem.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -14,3 +16,20 @@ animations = [ {
 [node name="Card" type="AnimatedSprite"]
 frames = SubResource( 1 )
 centered = false
+
+[node name="ItemSprite" type="TextureRect" parent="."]
+anchor_left = 0.429
+anchor_top = 0.528
+anchor_right = 0.429
+anchor_bottom = 0.528
+margin_left = -25.036
+margin_top = -25.968
+margin_right = 24.964
+margin_bottom = 20.032
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="InvalidItem" type="Sprite" parent="ItemSprite"]
+position = Vector2( 24, 24 )
+texture = ExtResource( 4 )

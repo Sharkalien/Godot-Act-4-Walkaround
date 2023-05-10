@@ -1849,7 +1849,7 @@ package GateLite_fla
                            pickUps[curItemIndex][2] *= -0.2; // item's x velocity on hitting the side of the viewport
                            pickUps[curItemIndex][3] = -5; // item's up y velocity on hitting the side of the viewport or any non traversable path
                         }
-                        if(itemMC.y > pickUps[curItemIndex][4])
+                        if(itemMC.y > pickUps[curItemIndex][4]) // if the item reaches or goes past its floor y coord, stop moving
                         {
                            pickUps[curItemIndex][2] = 0;
                            pickUps[curItemIndex][3] = 0;
@@ -1885,7 +1885,7 @@ package GateLite_fla
                            enemy = this[enemies[curEnemy][0]];
                            if(Math.abs(pickUps[curItemIndex][2]) != 0)
                            {
-                              if(Math.abs(enemy.y - pickUps[curItemIndex][4]) < 50) // if the item's y coord is close enough to the enemy
+                              if(Math.abs(enemy.y - pickUps[curItemIndex][4]) < 50) // if the item's landing y floor coord is close enough to the enemy
                               {
                                  if(Math.abs(enemy.x - itemMC.x) < 50) // if the item's x coord is close enough to the enemy
                                  {
