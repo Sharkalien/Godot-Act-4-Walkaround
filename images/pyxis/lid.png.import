@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1300.png-5452891aea15afb38a50fe8c42517525.stex"
+path="res://.import/lid.png-aaff235043e61a66f4fdc2557ef2dc4a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pyxis/1300.png"
-dest_files=[ "res://.import/1300.png-5452891aea15afb38a50fe8c42517525.stex" ]
+source_file="res://images/pyxis/lid.png"
+dest_files=[ "res://.import/lid.png-aaff235043e61a66f4fdc2557ef2dc4a.stex" ]
 
 [params]
 

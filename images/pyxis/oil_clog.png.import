@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1290.png-a36e30d802a479dda7e472690bb01812.stex"
+path="res://.import/oil_clog.png-88e4ec8954b42a6fbfa784402aeda33c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/pyxis/1290.png"
-dest_files=[ "res://.import/1290.png-a36e30d802a479dda7e472690bb01812.stex" ]
+source_file="res://images/pyxis/oil_clog.png"
+dest_files=[ "res://.import/oil_clog.png-88e4ec8954b42a6fbfa784402aeda33c.stex" ]
 
 [params]
 
