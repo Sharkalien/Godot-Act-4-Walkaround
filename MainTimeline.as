@@ -982,8 +982,8 @@ package GateLite_fla
          var _loc39_:String = null;
          var cardPos:Point = null;
          var _loc41_:int = 0;
-         var _loc42_:Class = null;
-         var _loc43_:MovieClip = null;
+         var pyxItemClass:Class = null;
+         var pyxItemMC:MovieClip = null;
          var _loc44_:MovieClip = null;
          _loc2_ = new Point(stage.stageWidth / 1.8 / scaleX,stage.stageHeight / 1.8 / scaleY);
          _loc3_ = false;
@@ -1846,8 +1846,8 @@ package GateLite_fla
                         if(!map.hitTestPoint(itemMC.x,pickUps[curItemIndex][4],true) || itemMC.x < -x / scaleX || itemMC.x > -x / scaleX + stage.stageWidth / scaleX)
                         {
                            itemMC.x -= pickUps[curItemIndex][2];
-                           pickUps[curItemIndex][2] *= -0.2; // item's x velocity on hitting the side of the viewport
-                           pickUps[curItemIndex][3] = -5; // item's up y velocity on hitting the side of the viewport or any non traversable path
+                           pickUps[curItemIndex][2] *= -0.2; // item's x velocity on hitting the side of the viewport or any non traversable path
+                           pickUps[curItemIndex][3] = -5; // item's up y velocity
                         }
                         if(itemMC.y > pickUps[curItemIndex][4]) // if the item reaches or goes past its floor y coord, stop moving
                         {
@@ -2219,13 +2219,13 @@ package GateLite_fla
             {
                if(this[pyxis[curPyx][0]].itemAnim)
                {
-                  _loc42_ = getDefinitionByName("item" + pyxis[curPyx][1]) as Class;
-                  _loc43_ = MovieClip(Object(new _loc42_()));
+                  pyxItemClass = getDefinitionByName("item" + pyxis[curPyx][1]) as Class;
+                  pyxItemMC = MovieClip(Object(new pyxItemClass()));
                   _loc44_ = this[pyxis[curPyx][0]].itemAnim.item;
                   _loc44_.y -= 30;
                   _loc44_.gotoAndStop(pyxis[curPyx][1] + 1);
-                  _loc44_.width += (_loc43_.width - _loc44_.width) / 9;
-                  _loc44_.height += (_loc43_.height - _loc44_.height) / 9;
+                  _loc44_.width += (pyxItemMC.width - _loc44_.width) / 9;
+                  _loc44_.height += (pyxItemMC.height - _loc44_.height) / 9;
                   if(this[pyxis[curPyx][0]].itemAnim.currentFrame == this[pyxis[curPyx][0]].itemAnim.totalFrames)
                   {
                      addItem(pyxis[curPyx][1],new Point(this[pyxis[curPyx][0]].x,this[pyxis[curPyx][0]].y - 250),pyxis[curPyx][2],this[pyxis[curPyx][0]].y + pyxis[curPyx][3]);
