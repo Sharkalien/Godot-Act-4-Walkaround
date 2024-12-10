@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/footBase.png-14b4d14c546540dde30218402299099f.stex"
+path="res://.import/footbase.png-2f8c56bdfee48eadef1fa7d400194add.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/enemies/parts/footBase.png"
-dest_files=[ "res://.import/footBase.png-14b4d14c546540dde30218402299099f.stex" ]
+source_file="res://images/enemies/parts/footbase.png"
+dest_files=[ "res://.import/footbase.png-2f8c56bdfee48eadef1fa7d400194add.stex" ]
 
 [params]
 
