@@ -2527,6 +2527,7 @@ position = Vector2( -1472, 2094 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 189, 263 )
 current = true
+process_mode = 0
 limit_left = -2671
 limit_top = -2746
 limit_right = 2433
