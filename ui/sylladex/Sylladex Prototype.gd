@@ -24,13 +24,13 @@ func _ready() -> void:
 			hud.add_child(tCard)
 #			tCard.show_behind_parent = true
 			tCard.position.y = -110
-			tCard.z_index = zIndex
+#			tCard.z_index = zIndex
 			if cardIndex == 0:
 				tCard.frame = 1
 			
 			sylladex[queueStack].push_back(tCard)
 			cardIndex += 1
-			zIndex -= 1
+#			zIndex -= 1
 		queueStack += 1
 
 
